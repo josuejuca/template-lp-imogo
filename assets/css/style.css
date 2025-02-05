@@ -56,7 +56,7 @@
 :root {
   --primary-font: "Poppins", sans-serif;
   --secondary-font: "Poppins", sans-serif;
-  --h1-size: 4rem;
+  --h1-size: 3.5rem;
   --h1-weight: 600;
   --h2-size: 3rem;
   --h2-weight: 600;
@@ -388,6 +388,7 @@ p:last-child {
 }
 
 h1 {
+  width: 100%; /* ou qualquer valor desejado, como 80%, 500px, etc. */
   margin-bottom: 1.5rem;
   font-size: var(--h1-size);
   font-weight: var(--h1-weight);
@@ -396,6 +397,8 @@ h1 {
   color: var(--primary-t-color);
   -ms-word-wrap: break-word;
   word-wrap: break-word;
+  white-space: pre-wrap; /* Permite quebras de linha automáticas */
+  width: 100%; /* Ajuste conforme necessário */
 }
 h1 em {
   display: block;
@@ -1123,7 +1126,7 @@ header .navbar-expand .icons i {
   font-weight: 400;
 }
 header .navbar-expand:not(.navbar-sticky) .navbar-brand:not(.invert) img {
-  filter: brightness(0) invert(1);
+  /* filter: brightness(0) invert(1); */
 }
 header .navbar-sticky {
   background-color: rgba(255, 255, 255, 0.69);
@@ -1440,7 +1443,8 @@ header .navbar-sticky .navbar-nav .nav-item a:not(.btn) {
   z-index: -1;
 }
 .has-overlay.overlay-gradient::after {
-  background: linear-gradient(-47deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  /* background: linear-gradient(-47deg, #42064c 0%, #82118d 100%); */
+  background: linear-gradient(-47deg, #82118d 0%, #42064c 100%);
 }
 .has-overlay.overlay-dark::after {
   background: rgba(16, 16, 45, 0.9);

@@ -18,6 +18,7 @@
 
 	<!-- Style css -->
 	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 </head>
 
@@ -30,7 +31,8 @@
 					<defs>
 						<filter id="goo" x="-40%" y="-40%" height="200%" width="400%">
 							<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-							<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -8" result="goo" />
+							<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -8"
+								result="goo" />
 						</filter>
 					</defs>
 					<g filter="url(#goo)">
@@ -54,7 +56,7 @@
 
 					<!-- Logo -->
 					<a class="navbar-brand" href="/">
-						<img src="assets/img/logo/logo-white.png" style="max-width: 100px;" alt="Brand Logo" />
+						<img src="assets/img/logo/logo.png" style="max-width: 100px;" alt="Log imoGo" />
 					</a>
 
 					<div class="ms-auto"></div>
@@ -62,13 +64,13 @@
 					<!-- Navbar Nav -->
 					<ul class="navbar-nav items mx-auto">
 						<li class="nav-item dropdown">
-							<a href="#" class="nav-link">Home </a>							
+							<a href="#" class="nav-link">Home </a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link smooth-anchor" href="#features">Serviços</a>
 						</li>
-						
-						
+
+
 						<li class="nav-item">
 							<a class="nav-link" target="_blank" href="https://imogo.online/">Avaliador</a>
 						</li>
@@ -98,8 +100,8 @@
 					<div class="col-12 col-md-7 col-lg-8">
 						<!-- Hero Content -->
 						<div class="hero-content text-center">
-							<h1 class="text-white" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">Ferramenta de tecnologia para corretores de imóveis</h1>
-							<p class="sub-heading text-white my-4" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">imoGo é o app que transforma sua rotina, integrando tecnologia de ponta para facilitar seu trabalho, economizar seu tempo e fazer você crescer no mercado imobiliário.</p>
+							<h1 class="text-white typewriter" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">negocie imóveis com menos esforço. a IA faz o trabalho pesado,você colhe os resultados</h1>
+							<!-- <p class="sub-heading text-white my-4" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">imoGo é o app que transforma sua rotina, integrando tecnologia de ponta para facilitar seu trabalho, economizar seu tempo e fazer você crescer no mercado imobiliário.</p> -->
 
 							<!-- Download Button -->
 							<div class="content" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
@@ -107,9 +109,10 @@
 									<a href="https://app.imogo.com.br/" target="_blank">
 										<img src="assets/img/content/pwa.png" alt="">
 									</a>
-									
+
 								</div>
-								<span class="d-block fst-italic fw-light text-white mt-3">* Instale o nosso PWA disponivel para Android e IOS</span>
+								<span class="d-block fst-italic fw-light text-white mt-3">* Instale o nosso PWA
+									disponivel para Android e IOS</span>
 							</div>
 						</div>
 					</div>
@@ -143,34 +146,43 @@
 						<ul class="features-item list-group">
 							<li class="item list-group-item border-0">
 								<!-- Image Box -->
-								<div class="image-box layout-2 px-3 py-0 wow fadeInLeft" data-aos-duration="2s" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+								<div class="image-box layout-2 px-3 py-0 wow fadeInLeft" data-aos-duration="2s"
+									data-wow-delay="0.3s"
+									style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
 									<img class="avatar-sm" src="assets/img/content/icon-1.png" alt="">
 									<!-- Content -->
 									<div class="content mt-3">
 										<h4 class="mt-0 mb-3">Precificador</h4>
-										<p class="mt-3">Gere uma avaliação detalhada do valor do seu imóvel em menos de 1 minuto.</p>
+										<p class="mt-3">Gere uma avaliação detalhada do valor do seu imóvel em menos de
+											1 minuto.</p>
 									</div>
 								</div>
 							</li>
 							<li class="item list-group-item border-0">
 								<!-- Image Box -->
-								<div class="image-box layout-2 px-3 py-0 wow fadeInLeft" data-aos-duration="2s" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+								<div class="image-box layout-2 px-3 py-0 wow fadeInLeft" data-aos-duration="2s"
+									data-wow-delay="0.6s"
+									style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
 									<img class="avatar-sm" src="assets/img/content/icon-2.png" alt="">
 									<!-- Content -->
 									<div class="content mt-3">
 										<h4 class="mt-0 mb-3">Simulador de crédito Imobiliário </h4>
-										<p class="mt-3">Faça simulações rápidas e descomplicadas para facilitar a comparação das taxas de juros e dos prazos.</p>
+										<p class="mt-3">Faça simulações rápidas e descomplicadas para facilitar a
+											comparação das taxas de juros e dos prazos.</p>
 									</div>
 								</div>
 							</li>
 							<li class="item list-group-item border-0">
 								<!-- Image Box -->
-								<div class="image-box layout-2 px-3 py-0 wow fadeInLeft" data-aos-duration="2s" data-wow-delay="0.9s" style="visibility: visible; animation-delay: 0.9s; animation-name: fadeInLeft;">
+								<div class="image-box layout-2 px-3 py-0 wow fadeInLeft" data-aos-duration="2s"
+									data-wow-delay="0.9s"
+									style="visibility: visible; animation-delay: 0.9s; animation-name: fadeInLeft;">
 									<img class="avatar-sm" src="assets/img/content/icon-3.png" alt="">
 									<!-- Content -->
 									<div class="content mt-3">
 										<h4 class="mt-0 mb-3">Planejamento de rede social</h4>
-										<p class="mt-3">Planeje e automatize publicações para destacar imóveis nas redes sociais.</p>
+										<p class="mt-3">Planeje e automatize publicações para destacar imóveis nas redes
+											sociais.</p>
 									</div>
 								</div>
 							</li>
@@ -186,36 +198,45 @@
 						<ul class="features-item list-group">
 							<li class="item list-group-item border-0">
 								<!-- Image Box -->
-								<div class="image-box layout-2 px-3 py-0 wow fadeInRight" data-aos-duration="2s" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInRight;">
+								<div class="image-box layout-2 px-3 py-0 wow fadeInRight" data-aos-duration="2s"
+									data-wow-delay="0.3s"
+									style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInRight;">
 									<img class="avatar-sm" src="assets/img/content/icon-4.png" alt="">
 									<!-- Content -->
 									<div class="content mt-3">
 										<h4 class="mt-0 mb-3">Análise de
 											certidões
-											</h4>
-										<p class="mt-3">Gere um parecer da análise integrada das certidões essenciais para a segurança das transações imobiliárias.</p>
+										</h4>
+										<p class="mt-3">Gere um parecer da análise integrada das certidões essenciais
+											para a segurança das transações imobiliárias.</p>
 									</div>
 								</div>
 							</li>
 							<li class="item list-group-item border-0">
 								<!-- Image Box -->
-								<div class="image-box layout-2 px-3 py-0 wow fadeInRight" data-aos-duration="2s" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInRight;">
+								<div class="image-box layout-2 px-3 py-0 wow fadeInRight" data-aos-duration="2s"
+									data-wow-delay="0.6s"
+									style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInRight;">
 									<img class="avatar-sm" src="assets/img/content/icon-5.png" alt="">
 									<!-- Content -->
 									<div class="content mt-3">
 										<h4 class="mt-0 mb-3">Gerador de contratos</h4>
-										<p class="mt-3">Gere contratos com modelos validados em poucos minutos para serem assinados digitalmente..</p>
+										<p class="mt-3">Gere contratos com modelos validados em poucos minutos para
+											serem assinados digitalmente..</p>
 									</div>
 								</div>
 							</li>
 							<li class="item list-group-item border-0">
 								<!-- Image Box -->
-								<div class="image-box layout-2 px-3 py-0 wow fadeInRight" data-aos-duration="2s" data-wow-delay="0.9s" style="visibility: visible; animation-delay: 0.9s; animation-name: fadeInRight;">
+								<div class="image-box layout-2 px-3 py-0 wow fadeInRight" data-aos-duration="2s"
+									data-wow-delay="0.9s"
+									style="visibility: visible; animation-delay: 0.9s; animation-name: fadeInRight;">
 									<img class="avatar-sm" src="assets/img/content/icon-6.png" alt="">
 									<!-- Content -->
 									<div class="content mt-3">
 										<h4 class="mt-0 mb-3">Gerador de anúncios</h4>
-										<p class="mt-3">Desenvolva anúncios otimizados e profissionais para atrair potenciais compradores.</p>
+										<p class="mt-3">Desenvolva anúncios otimizados e profissionais para atrair
+											potenciais compradores.</p>
 									</div>
 								</div>
 							</li>
@@ -243,26 +264,29 @@
 									<div class="icon layout-2 align-items-start mt-1 me-2">
 										<span class="material-symbols-outlined">task_alt</span>
 									</div>
-									<span>Ganhe mais tempo para focar em fechar negócios. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+									<span>Ganhe mais tempo para focar em fechar negócios.
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 								</li>
 
 								<li class="list-group-item d-flex border-0 p-0">
 									<div class="icon layout-2 align-items-start mt-1 me-2">
 										<span class="material-symbols-outlined">task_alt</span>
 									</div>
-									<span>Deixe a tecnologia trabalhar por você, sem complicações. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>
+									<span>Deixe a tecnologia trabalhar por você, sem complicações.
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>
 								</li>
 
 								<li class="list-group-item d-flex border-0 p-0">
 									<div class="icon layout-2 align-items-start mt-1 me-2">
 										<span class="material-symbols-outlined">task_alt</span>
 									</div>
-									<span>Profissionalize sua atuação e impressione seus clientes. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>
+									<span>Profissionalize sua atuação e impressione seus clientes.
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>
 								</li>
 
 							</ul>
 
-							
+
 
 						</div>
 					</div>
@@ -319,6 +343,22 @@
 	<script src="assets/js/vendor/countdown.min.js"></script>
 	<script src="assets/js/vendor/gallery.min.js"></script>
 
+	<script>
+		function typeWrite(element) {
+			const textArray = element.innerHTML.split('');
+			element.innerHTML = '';
+			textArray.forEach((letter, i) => {
+				setTimeout(() => element.innerHTML += letter, 50 * i);
+			});
+		}
+
+		document.addEventListener('DOMContentLoaded', function () {
+			const typewriterElement = document.querySelector('.typewriter');
+			if (typewriterElement) {
+				typeWrite(typewriterElement);
+			}
+		});
+	</script>
 	<!-- Main js -->
 	<script src="assets/js/main.js"></script>
 </body>
