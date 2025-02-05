@@ -100,7 +100,8 @@
 					<div class="col-12 col-md-7 col-lg-8">
 						<!-- Hero Content -->
 						<div class="hero-content text-center">
-							<h1 class="text-white typewriter" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">negocie imóveis com menos esforço. a IA faz o trabalho pesado,você colhe os resultados</h1>
+							<h1 class="text-white typewriter" data-aos="fade-up" data-aos-delay="500"
+								data-aos-duration="1000">negocie imóveis com menos esforço. <br> a IA faz o trabalho pesado, você colhe os resultados</h1>
 							<!-- <p class="sub-heading text-white my-4" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">imoGo é o app que transforma sua rotina, integrando tecnologia de ponta para facilitar seu trabalho, economizar seu tempo e fazer você crescer no mercado imobiliário.</p> -->
 
 							<!-- Download Button -->
@@ -135,8 +136,8 @@
 					<div class="col-12 col-md-10 col-lg-7">
 						<!-- Intro -->
 						<div class="intro text-center mb-4">
-							<h2 class="title mt-0">Quer se tornar um corretor estratégico?</h2>
-							<p>Utilize as ferramentas gratuitas da imoGo!</p>
+							<h2 class="title mt-0 text-laranja">Facilite seu trabalho</h2>
+							<p>Transforme sua rotina com as ferramentas inteligentes da imoGo para crescer no mercado imobiliário.</p>
 						</div>
 					</div>
 				</div>
@@ -257,7 +258,7 @@
 
 					<div class="col-12 col-lg-6">
 						<div class="content">
-							<h2 class="mt-0">Feito para o corretor moderno</h2>
+							<h2 class="mt-0 text-roxo">Feito para o corretor moderno</h2>
 
 							<ul class="list-group list-group-flush">
 								<li class="list-group-item d-flex border-0 p-0">
@@ -347,8 +348,25 @@
 		function typeWrite(element) {
 			const textArray = element.innerHTML.split('');
 			element.innerHTML = '';
+			let isTag = false;
+			let text = '';
+
 			textArray.forEach((letter, i) => {
-				setTimeout(() => element.innerHTML += letter, 50 * i);
+				setTimeout(() => {
+					if (letter === '<') {
+						isTag = true;
+					}
+					if (isTag) {
+						text += letter;
+					} else {
+						text += letter;
+						element.innerHTML = text;
+					}
+					if (letter === '>') {
+						isTag = false;
+						element.innerHTML = text;
+					}
+				}, 30 * i); // Ajuste a velocidade conforme necessário
 			});
 		}
 
