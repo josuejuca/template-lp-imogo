@@ -861,6 +861,22 @@ main {
   margin-right: 0.8rem;
 }
 
+.btn-laranja{
+  position: relative;
+  font-size: 4rem;
+  font-weight: 800;
+  color: white !important;
+  line-height: 1;
+  text-align: center;
+  padding: 16px 34px;
+  border: 0 none;
+  border-radius: 100px;
+  outline: 0 none;
+  cursor: pointer;
+  z-index: 1;
+  background-color: #fb7d10;
+}
+
 .btn {
   position: relative;
   font-size: 1rem;
