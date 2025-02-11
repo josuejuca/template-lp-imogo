@@ -271,7 +271,7 @@
 		items: 1,
 		loop: true,
 		nav: false,
-		dots: true,
+		dots: false,
 		smartSpeed: 1500,
 		autoplay: true,
 		autoplayTimeout: 6000,

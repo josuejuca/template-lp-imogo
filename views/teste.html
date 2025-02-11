@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .carousel-container {
+            position: relative;
+            width: 75%; /* Carrossel ocupa 75% da largura da tela */
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel img {
+            width: 100%; /* As imagens ocupam 100% da largura do container */
+            flex-shrink: 0;
+        }
+
+        .tracinhos {
+            position: absolute;
+            bottom: 5%; /* Posiciona os tracinhos 5% abaixo da imagem */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px; /* Espaçamento entre os tracinhos */
+        }
+
+        .tracinho {
+            width: 20px;
+            height: 4px;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .tracinho.active {
+            background-color: #730d83;
+        }
+
+        @media (max-width: 600px) {
+            .carousel-container {
+                width: 100%;
+            }
+
+            .tracinhos {
+                bottom: 10%; /* Ajuste para telas menores */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carousel-container">
+        <div class="carousel">
+            <img src="assets/img/content/screenshot-1.png" alt="Imagem 1">
+            <img src="assets/img/content/screenshot-2.png" alt="Imagem 2">
+            <img src="assets/img/content/screenshot-3.png" alt="Imagem 3">
+            <img src="assets/img/content/screenshot-4.png" alt="Imagem 4">
+        </div>
+
+        <div class="tracinhos">
+            <span class="tracinho" data-index="0"></span>
+            <span class="tracinho" data-index="1"></span>
+            <span class="tracinho" data-index="2"></span>
+            <span class="tracinho" data-index="3"></span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousel = document.querySelector('.carousel');
+            const tracinhos = document.querySelectorAll('.tracinho');
+            const totalImagens = tracinhos.length;
+            let currentIndex = 0;
+
+            // Função para mover o carrossel
+            function moveCarousel(index) {
+                const offset = -index * 100;
+                carousel.style.transform = `translateX(${offset}%)`;
+                currentIndex = index;
+                updateTracinhos();
+            }
+
+            // Função para atualizar os tracinhos ativos
+            function updateTracinhos() {
+                tracinhos.forEach((tracinho, index) => {
+                    if (index === currentIndex) {
+                        tracinho.classList.add('active');
+                    } else {
+                        tracinho.classList.remove('active');
+                    }
+                });
+            }
+
+            // Adiciona eventos de clique aos tracinhos
+            tracinhos.forEach((tracinho, index) => {
+                tracinho.addEventListener('click', () => {
+                    moveCarousel(index);
+                });
+            });
+
+            // Avançar automaticamente para a próxima imagem
+            function autoMoveCarousel() {
+                currentIndex = (currentIndex + 1) % totalImagens;
+                moveCarousel(currentIndex);
+            }
+
+            // Inicia o carrossel automaticamente a cada 3 segundos
+            setInterval(autoMoveCarousel, 3000);
+
+            // Inicializa o primeiro tracinho como ativo
+            updateTracinhos();
+        });
+    </script>
+</body>
+
+</html>
