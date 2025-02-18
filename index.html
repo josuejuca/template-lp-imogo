@@ -721,7 +721,7 @@
 		
 		<a id="robbu-whatsapp-button" class="left" target="_blank"
 			href="https://api.whatsapp.com/send/?phone=5561981304920&text=Ol%C3%A1&type=phone_number&app_absent=0">
-			<div class="rwb-tooltip">Envie uma mensagem</div>
+			
 			<img src="./assets/img/logo/whatsapp-icon.svg">
 		</a>
 	</div>
@@ -841,7 +841,9 @@
 			box-shadow: 2px 2px 12px rgba(22, 124, 60, .2);
 			transition: .4s;
 			align-items: center;
-			justify-content: center
+			justify-content: center;
+			z-index: 9999 !important;
+			/* Adicionando z-index alto e !important */
 		}
 
 		#robbu-whatsapp-button>.rwb-tooltip {
@@ -856,7 +858,9 @@
 			box-shadow: 2px 2px 12px rgba(0, 0, 0, .2);
 			opacity: 0;
 			transition: .4s;
-			pointer-events: none
+			pointer-events: none;
+			z-index: 9999 !important;
+			/* Adicionando z-index alto e !important */
 		}
 
 		#robbu-whatsapp-button>.rwb-tooltip:after {
@@ -869,54 +873,56 @@
 			border-style: solid;
 			border-width: 6px 7px 0 7px;
 			border-color: #fff transparent transparent transparent;
-			transition: .4s
+			transition: .4s;
+			z-index: 9999 !important;
+			/* Adicionando z-index alto e !important */
 		}
 
 		#robbu-whatsapp-button.left {
-			left: 25px
+			left: 25px;
 		}
 
 		#robbu-whatsapp-button.left>.rwb-tooltip {
 			left: 0;
-			transform: translateX(-10%)
+			transform: translateX(-10%);
 		}
 
 		#robbu-whatsapp-button.left>.rwb-tooltip:after {
-			left: 23px
+			left: 23px;
 		}
 
 		#robbu-whatsapp-button:not(.left) {
-			right: 25px
+			right: 25px;
 		}
 
 		#robbu-whatsapp-button:not(.left)>.rwb-tooltip {
 			right: 0;
-			transform: translateX(10%)
+			transform: translateX(10%);
 		}
 
 		#robbu-whatsapp-button:not(.left)>.rwb-tooltip:after {
-			right: 23px
+			right: 23px;
 		}
 
 		#robbu-whatsapp-button>img {
 			display: block;
 			width: 34px;
-			height: 34px
+			height: 34px;
 		}
 
 		#robbu-whatsapp-button:hover {
 			background: #21bd5c;
-			box-shadow: 3px 3px 12px rgba(14, 81, 39, .4)
+			box-shadow: 3px 3px 12px rgba(14, 81, 39, .4);
 		}
 
 		#robbu-whatsapp-button:hover>.rwb-tooltip {
 			opacity: 1;
-			transform: translateX(0)
+			transform: translateX(0);
 		}
 
 		#robbu-whatsapp-button:hover>.rwb-tooltip:after {
 			top: 100%;
-			transition-delay: .4s
+			transition-delay: .4s;
 		}
 	</style>
 </body>
